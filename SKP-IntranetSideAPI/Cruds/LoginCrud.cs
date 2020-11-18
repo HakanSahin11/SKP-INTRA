@@ -25,7 +25,12 @@ namespace SKP_IntranetSideAPI.Cruds
            Task.Run(() => _login.Find(x => true).ToList()).Result;
 
         //Get Specific user by username (for login)
-        public LoginModel GetUser(string userName) =>
+        public LoginModel GetUser(string Email) =>
+            Task.Run(() => _login.Find(x => x.Email == Email).FirstOrDefault()).Result;
+
+
+        //Get Specific user by username (for login)
+        public LoginModel GetUserByUserName(string userName) =>
             Task.Run(() => _login.Find(x => x.UserName == userName).FirstOrDefault()).Result;
 
         //Get a Specific user login by Id 

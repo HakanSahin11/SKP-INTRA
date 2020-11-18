@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "df5G9Or2og+BQ4OjNvgjzQmrHr5qDWIK7FOYpdbShrRIAAjIbJt4hQEjvU8fddBY2sS75SfXLk+iyvyaBNUTjg==",
+  "dgSpecHash": "xvEuEPbFyoT8AfM6sntSnL19PUp0gtoynpoc67Yr1kkGQ/dabiiOXT7baFG9VjDrVfJyxUC0QukUMu1d4mkyGA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\hakan\\source\\repos\\SKP-INSTRA\\SKP-IntranetSideAPI\\SKP-IntranetSideAPI.csproj",
+  "projectFilePath": "C:\\Users\\hakan\\source\\repos\\SKP-INTRA\\SKP-IntranetSideAPI\\SKP-IntranetSideAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hakan\\.nuget\\packages\\dnsclient\\1.3.1\\dnsclient.1.3.1.nupkg.sha512",
     "C:\\Users\\hakan\\.nuget\\packages\\microsoft.netcore.platforms\\2.1.2\\microsoft.netcore.platforms.2.1.2.nupkg.sha512",

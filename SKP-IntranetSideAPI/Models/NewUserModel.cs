@@ -13,6 +13,7 @@ namespace SKP_IntranetSideAPI.Models
         [BsonRepresentation(BsonType.ObjectId)]
         public ObjectId Id { get; set; }
         public List<ObjectId> ProjectId { get; set; }
+        public string Email { get; set; }
         public string UserName { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -31,6 +32,8 @@ namespace SKP_IntranetSideAPI.Models
         public ObjectId Id { get; set; }
         public List<ObjectId> ProjectId { get; set; }
         public string UserType { get; set; }
+        public string Email { get; set; }
+
         public string UserName { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -43,6 +46,7 @@ namespace SKP_IntranetSideAPI.Models
         ObjectId Id { get; set; }
         List<ObjectId> ProjectId { get; set; }
         string UserType { get; set; }
+        string Email { get; set; }
         string UserName { get; set; }
         string FirstName { get; set; }
         string LastName { get; set; }
@@ -55,6 +59,8 @@ namespace SKP_IntranetSideAPI.Models
         [BsonRepresentation(BsonType.ObjectId)]
         public ObjectId Id { get; set; }
         public string UserName { get; set; }
+        public string Email { get; set; }
+
         public string Password { get; set; }
         public List<string> Recovery { get; set; }
 
@@ -65,6 +71,8 @@ namespace SKP_IntranetSideAPI.Models
         [BsonRepresentation(BsonType.ObjectId)]
         ObjectId Id { get; set; }
         string UserName { get; set; }
+        string Email { get; set; }
+
         string Password { get; set; }
         List<string> Recovery { get; set; }
     }

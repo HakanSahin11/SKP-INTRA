@@ -4836,11 +4836,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hakan\\source\\repos\\SKP-INSTRA\\SKP-IntranetSideAPI\\SKP-IntranetSideAPI.csproj",
+      "projectUniqueName": "C:\\Users\\hakan\\source\\repos\\SKP-INTRA\\SKP-IntranetSideAPI\\SKP-IntranetSideAPI.csproj",
       "projectName": "SKP-IntranetSideAPI",
-      "projectPath": "C:\\Users\\hakan\\source\\repos\\SKP-INSTRA\\SKP-IntranetSideAPI\\SKP-IntranetSideAPI.csproj",
+      "projectPath": "C:\\Users\\hakan\\source\\repos\\SKP-INTRA\\SKP-IntranetSideAPI\\SKP-IntranetSideAPI.csproj",
       "packagesPath": "C:\\Users\\hakan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hakan\\source\\repos\\SKP-INSTRA\\SKP-IntranetSideAPI\\obj\\",
+      "outputPath": "C:\\Users\\hakan\\source\\repos\\SKP-INTRA\\SKP-IntranetSideAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\hakan\\AppData\\Roaming\\NuGet\\NuGet.Config",

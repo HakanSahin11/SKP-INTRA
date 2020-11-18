@@ -32,19 +32,28 @@ namespace SKP_IntranetSideAPI.Controllers
         [HttpPost]
         public ActionResult LoginConfirm([FromBody] JsonElement LoginJson)
         {
-            //crypto?
 
             var content = JsonConvert.DeserializeObject<LoginModel>(LoginJson.GetRawText());
-            var savedLogin = _login.GetUser(content.UserName);
-            if (savedLogin == null)
+            LoginModel SavedContent;
+            LoginModel savedLoginUserName = _login.GetUserByUserName(content.UserName);
+            LoginModel savedLoginEmail = null;
+
+            if (savedLoginUserName == null)
+                savedLoginEmail = _login.GetUser(content.UserName);
+
+            if (savedLoginUserName == null && savedLoginEmail == null)
                 return NotFound();
+
+            if (savedLoginUserName != null)
+                SavedContent = savedLoginUserName;
+            else
+                SavedContent = savedLoginEmail;
 
             //salting / recov controller
 
             bool loginResult = false;
-            if (HashSalt(content.Password, Convert.FromBase64String(_salt.GetUserById(savedLogin.Id).SaltPass)).Pass == savedLogin.Password)
+            if (HashSalt(content.Password, Convert.FromBase64String(_salt.GetUserById(SavedContent.Id).SaltPass)).Pass == SavedContent.Password)
                 loginResult = true;
-
             return Ok(new APIReqModel { Json = loginResult.ToString() });
         }
 

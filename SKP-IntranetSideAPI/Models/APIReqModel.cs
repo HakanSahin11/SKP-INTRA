@@ -8,7 +8,6 @@ namespace SKP_IntranetSideAPI.Models
     public class APIReqModel : IAPIReqModel
     {
         public string Json { get; set; }
-
     }
     public interface IAPIReqModel
     {

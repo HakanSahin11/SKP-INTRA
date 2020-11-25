@@ -42,15 +42,26 @@ namespace SKP_IntranetSideAPI.Controllers
         [HttpPost]
         public ActionResult Create([FromBody] JsonElement jsUser)
         {
+            //Add checking if user already exits by username or email
             var user = JsonConvert.DeserializeObject<NewUserModel>(jsUser.GetRawText());
+            var matchUserName = _users.GetUser(user.UserName).Result;
+            if (matchUserName != null|| _users.GetUserByEmail(user.Email).Result != null)
+            {
+                if (matchUserName != null)
+                    return BadRequest("UserName already exists!");
+                else
+                {
+                    return BadRequest("Email already exists!");
+                }
+            }
             var recoveryCodes = GenerateRecovery();
 
             _users.Create(new UserModel { Id = user.Id, UserName = user.UserName, FirstName = user.FirstName, LastName = user.LastName, 
-                UserType = user.UserType, Specialty = user.Specialty, ProjectId = new List<ObjectId>()}).Wait();
+                Email = user.Email, UserType = user.UserType, Specialty = user.Specialty, ProjectId = new List<ObjectId>()}).Wait();
             var id = _users.GetUser(user.UserName).Result.Id;
             var hash = HashSalt(user.Password, null);
 
-            Task.Run(() => _login.Create(new LoginModel { Id = id, UserName = user.UserName, Password = hash.Pass, Recovery = recoveryCodes.HashKey }));
+            _login.Create(new LoginModel { Id = id, UserName = user.UserName, Email = user.Email, Password = hash.Pass, Recovery = recoveryCodes.HashKey });
             Task.Run(() => _salt.Create(new SaltModel(id, Convert.ToBase64String(GenerateSalt()), hash.Salt, recoveryCodes.SaltKey)));
             Task.WaitAll();
             return Ok(new APIReqModel { Json = string.Join(",", recoveryCodes.Key.ToArray()) });

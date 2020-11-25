@@ -30,6 +30,12 @@ namespace SKP_IntranetSideAPI.Cruds
           await Task.Run(() =>
           _users.Find(x => x.UserName == username).FirstOrDefault());
 
+        //Get Specific user by Email (for loging mainly)
+        public async Task<UserModel> GetUserByEmail(string email) =>
+          await Task.Run(() =>
+          _users.Find(x => x.Email == email).FirstOrDefault());
+
+
         //Get specific user by Id
         public async Task<UserModel> GetUserById(ObjectId id) =>
            await Task.Run(() =>

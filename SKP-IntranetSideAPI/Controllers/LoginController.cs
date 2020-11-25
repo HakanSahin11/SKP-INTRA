@@ -33,6 +33,7 @@ namespace SKP_IntranetSideAPI.Controllers
         public ActionResult LoginConfirm([FromBody] JsonElement LoginJson)
         {
             //Crypto?
+
             var content = JsonConvert.DeserializeObject<LoginModel>(LoginJson.GetRawText());
             LoginModel SavedContent = _login.GetUserByUserName(content.UserName);
             if (SavedContent == null)
@@ -44,8 +45,7 @@ namespace SKP_IntranetSideAPI.Controllers
             bool loginResult = false;
             if (HashSalt(content.Password, Convert.FromBase64String(_salt.GetUserById(SavedContent.Id).SaltPass)).Pass == SavedContent.Password)
                 loginResult = true;
-            return Ok(new APIReqModel { Json = loginResult.ToString() });
+            return Ok(loginResult);
         }
-
     }
 }

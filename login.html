@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css"> 
+    <link rel="stylesheet" href="login.css">
+
+</head>
+<body>
+    <div class="page">
+        <header tabindex="0">SKP DATA-IT</header>
+        <div id="nav-container">
+          <div class="bg"></div>
+          <div class="button" tabindex="0">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </div>
+          <div id="nav-content" tabindex="0">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="forum.html">Forum</a></li>
+              <li><a href="ideas.html">Ideas</a></li>
+              <li><a href="guidelines.html">Guidelines</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="login.html">Login</a></li>
+              <li class="small"><a href="https://www.facebook.com/aarhustech">Facebook</a><a href="https://www.linkedin.com/school/aarhustech/">LinkedIN</a></li>
+            </ul>
+          </div>
+        </div>
+      
+        <main>
+          <div class="content">
+            <div class="login-page">
+                <div class="form">
+                    <form class="register-form">
+                    <input id="firstNameReg" type="text" placeholder="Firstname" name="firstname" required/>
+                    <input id="lastNameReg" type="text" placeholder="Lastname" name="lastname" required/>
+                      <select id="Specializing" name="specializing">
+                        <option value="Programmering">Programmering</option>
+                        <option value="Infrastruktur">Infrastruktur</option>
+                        <option value="Elektronikfagteknikker">Elektronikfagteknikker</option>
+                        <option value="IT-Supporter">IT-Supporter</option>
+                      </select>
+                    <input id="userNameReg" type="text" placeholder="Username" name="username" required/>
+                    <input id="passwordReg" type="password" placeholder="Password" name="password" required/>
+                    <input id="emailReg" type="text" placeholder="Email" name="email" required/>
+                    <button id="create">Create</button>
+                    <p class="message"> Already Registered? <a href="#">Login</a>
+                    </p>
+                    </form>
+                
+                    <form class="login-form">
+                    <input id="userNameLogin" type="text" placeholder="Username" name="username" required/>
+                    <input id="passwordLogin" type="password" placeholder="Password" name="password" required/>
+                    <button id="login">login</button>
+                    <p class="message">Not Registered? <a href="#">Register</a></p>
+                    </form>
+                </div>
+                </div>
+                
+
+          </div>
+        </main>
+      </div>
+    
+</body>
+
+
+<script src="script.js"></script>
+<!-- <script src='https://code.jquery.com/jquery-3.4.1.min.js'></script> -->
+<script src="login.js"></script>
+
+<!--     <script>
+      //for posts req:
+      function LoginPostReq(username, password){
+        var jsObj = {UserName:  username, Password : password};
+          APIMethod('Login', 'POST', JSON.stringify(jsObj));
+      }
+
+      function RegisterPostReq(){
+          var jsObj = {UserName: username, Password: password, Email: email, FirstName: firstname, LastName: lastname, Specialty: specialty};
+          APIMethod('User', 'POST', JSON.stringify(jsObj));
+      }
+
+      function LoginGetReq(){
+        APIMethod('Login', 'GET');
+      }
+
+      function APIMethod(api, method, content){
+        var xhttp = new XMLHttpRequest();
+        xhttp.open(method, 'https://localhost:5001/api/' + api, true);
+        xhttp.setRequestHeader('Content-Type', 'application/json');
+        xhttp.onload = function(){
+          console.log(xhttp.responseText);  //change here
+      }
+      xhttp.send(content);
+      }
+    </script> -->
+</html>

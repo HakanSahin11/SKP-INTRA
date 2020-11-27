@@ -1,0 +1,30 @@
+.programmering{
+    height: 275px;
+    width: 275px;
+    border: 10px solid black;
+}
+.elektronikfagteknikker{
+    height: 275px;
+    width: 275px;
+    border: 10px solid black;
+}
+.itsupporter{
+    height: 275px;
+    width: 275px;
+    border: 10px solid black;
+}
+
+.infrastruktur{
+    height: 275px;
+    width: 275px;
+    border: 10px solid black;
+}
+
+.pictures{
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    margin-left: -440px;
+    column-count: 4;
+    column-gap: 400px;
+}

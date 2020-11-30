@@ -29,6 +29,7 @@ header {
   color: #fff;
   justify-content: center;
   align-items: center;
+  user-select: none;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
@@ -147,6 +148,7 @@ main small {
   height: 100%;
   display: flex;
   flex-direction: column;
+  user-select: none;
 }
 
 #nav-content li a {
@@ -158,6 +160,7 @@ main small {
 
 #nav-content li a:hover {
   color: #BF7497;
+  cursor: pointer;
 }
 
 #nav-content li:not(.small) + .small {
@@ -181,11 +184,6 @@ main small {
 #nav-container:focus-within #nav-content {
   transform: none;
 }
-
-
-
-
-
 
 * {
   box-sizing: border-box;
@@ -220,10 +218,15 @@ ul {
   list-style: none;
 }
 
+label, select, input, textarea:placeholder-shown {
+  user-select: none;
+}
+
 .atlogo{
   width: 100%;
   height: 100%;
   vertical-align: middle;
+  user-select: none;
 }
 
 

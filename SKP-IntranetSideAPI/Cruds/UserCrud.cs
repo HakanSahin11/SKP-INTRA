@@ -1,5 +1,6 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Driver;
+using NLog;
 using SKP_IntranetSideAPI.DB_Settings;
 using SKP_IntranetSideAPI.Models;
 using System;
@@ -11,13 +12,26 @@ namespace SKP_IntranetSideAPI.Cruds
 {
     public class UserCrud
     {
+
+        //logger
+        private static readonly Logger logger = LogManager.GetCurrentClassLogger();
+
         //DB Initialazation, with input saved in launchSettings.json
         private readonly IMongoCollection<UserModel> _users;
         public UserCrud(IUserDBSettings settings)
         {
-            var client = new MongoClient(settings.ConnectionString);
-            var database = client.GetDatabase(settings.Database);
-            _users = database.GetCollection<UserModel>(settings.Collection);
+            try
+            {
+                var client = new MongoClient(settings.ConnectionString);
+                var database = client.GetDatabase(settings.Database);
+                _users = database.GetCollection<UserModel>(settings.Collection);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"Error Code 4.1 - Database connection establishment\n{e.Message}");
+                throw new Exception("Error Code 4.1 - Database connection establishment");
+
+            }
         }
 
         //Get all users

@@ -176,6 +176,40 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
+      "NLog/4.7.6": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/NLog.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/NLog.dll": {}
+        }
+      },
+      "NLog.Config/4.7.6": {
+        "type": "package",
+        "dependencies": {
+          "NLog": "4.7.6",
+          "NLog.Schema": "4.7.6"
+        },
+        "contentFiles": {
+          "contentFiles/any/any/NLog.config": {
+            "buildAction": "None",
+            "codeLanguage": "any",
+            "copyToOutput": true,
+            "outputPath": "NLog.config"
+          }
+        }
+      },
+      "NLog.Schema/4.7.6": {
+        "type": "package",
+        "contentFiles": {
+          "contentFiles/any/any/NLog.xsd": {
+            "buildAction": "None",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        }
+      },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
         "type": "package",
         "runtimeTargets": {
@@ -1546,6 +1580,67 @@
         "newtonsoft.json.12.0.3.nupkg.sha512",
         "newtonsoft.json.nuspec",
         "packageIcon.png"
+      ]
+    },
+    "NLog/4.7.6": {
+      "sha512": "mVYfNsZk6HY26/S/T3vVd2RS/1GySaeNh6bjP8uE7mKAdTENlRycQr7S4FC+I//QflXl/D/HEEugE47BDxQ5wA==",
+      "type": "package",
+      "path": "nlog/4.7.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid44/NLog.dll",
+        "lib/monoandroid44/NLog.xml",
+        "lib/net35/NLog.dll",
+        "lib/net35/NLog.xml",
+        "lib/net40-client/NLog.dll",
+        "lib/net40-client/NLog.xml",
+        "lib/net45/NLog.dll",
+        "lib/net45/NLog.xml",
+        "lib/netstandard1.3/NLog.dll",
+        "lib/netstandard1.3/NLog.xml",
+        "lib/netstandard1.5/NLog.dll",
+        "lib/netstandard1.5/NLog.xml",
+        "lib/netstandard2.0/NLog.dll",
+        "lib/netstandard2.0/NLog.xml",
+        "lib/sl4/NLog.dll",
+        "lib/sl4/NLog.xml",
+        "lib/sl5/NLog.dll",
+        "lib/sl5/NLog.xml",
+        "lib/wp8/NLog.dll",
+        "lib/wp8/NLog.xml",
+        "lib/xamarinios10/NLog.dll",
+        "lib/xamarinios10/NLog.xml",
+        "nlog.4.7.6.nupkg.sha512",
+        "nlog.nuspec"
+      ]
+    },
+    "NLog.Config/4.7.6": {
+      "sha512": "4rrKtrgMZ4w9dyk/5aVISyGsfdcd+STumZONKouJFlJ3cvWLhw5cLe7QpqE/8SwW4E5Lr3xCqJA9e5QPCVMZNw==",
+      "type": "package",
+      "path": "nlog.config/4.7.6",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "content/NLog.config",
+        "contentFiles/any/any/NLog.config",
+        "nlog.config.4.7.6.nupkg.sha512",
+        "nlog.config.nuspec",
+        "tools/Install.ps1"
+      ]
+    },
+    "NLog.Schema/4.7.6": {
+      "sha512": "wHlakqgco/grSxtY6g2kq0o3QMmpTXgV6kBGXn9CkYxOzoVxMQkB/p5ZoayjOBvWbOUsWqpppo0ETaa/nysg2Q==",
+      "type": "package",
+      "path": "nlog.schema/4.7.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "content/NLog.xsd",
+        "contentFiles/any/any/NLog.xsd",
+        "nlog.schema.4.7.6.nupkg.sha512",
+        "nlog.schema.nuspec"
       ]
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
@@ -4827,23 +4922,25 @@
     ".NETCoreApp,Version=v3.1": [
       "MongoDB.Bson >= 2.11.4",
       "MongoDB.Driver >= 2.11.4",
+      "NLog.Config >= 4.7.6",
+      "NLog.Schema >= 4.7.6",
       "Newtonsoft.Json >= 12.0.3"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\hakan\\.nuget\\packages\\": {}
+    "C:\\Users\\Hakan\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hakan\\source\\repos\\SKP-INTRA\\SKP-IntranetSideAPI\\SKP-IntranetSideAPI.csproj",
+      "projectUniqueName": "C:\\Users\\Hakan\\Source\\Repos\\SKP-INTRA\\SKP-IntranetSideAPI\\SKP-IntranetSideAPI.csproj",
       "projectName": "SKP-IntranetSideAPI",
-      "projectPath": "C:\\Users\\hakan\\source\\repos\\SKP-INTRA\\SKP-IntranetSideAPI\\SKP-IntranetSideAPI.csproj",
-      "packagesPath": "C:\\Users\\hakan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hakan\\source\\repos\\SKP-INTRA\\SKP-IntranetSideAPI\\obj\\",
+      "projectPath": "C:\\Users\\Hakan\\Source\\Repos\\SKP-INTRA\\SKP-IntranetSideAPI\\SKP-IntranetSideAPI.csproj",
+      "packagesPath": "C:\\Users\\Hakan\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Hakan\\Source\\Repos\\SKP-INTRA\\SKP-IntranetSideAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\hakan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Hakan\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4875,6 +4972,14 @@
             "target": "Package",
             "version": "[2.11.4, )"
           },
+          "NLog.Config": {
+            "target": "Package",
+            "version": "[4.7.6, )"
+          },
+          "NLog.Schema": {
+            "target": "Package",
+            "version": "[4.7.6, )"
+          },
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[12.0.3, )"
@@ -4898,7 +5003,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

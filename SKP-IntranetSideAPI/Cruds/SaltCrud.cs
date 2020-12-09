@@ -1,5 +1,6 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Driver;
+using NLog;
 using SKP_IntranetSideAPI.DB_Settings;
 using SKP_IntranetSideAPI.Models;
 using System;
@@ -11,14 +12,26 @@ namespace SKP_IntranetSideAPI.Cruds
 {
     public class SaltCrud
     {
+
+        //logger
+        private static readonly Logger logger = LogManager.GetCurrentClassLogger();
+
         private readonly IMongoCollection<SaltModel> _salt;
 
         //DB Initialazation, with input saved in launchSettings.json
         public SaltCrud(ISaltDBSettings settings)
         {
-            var client = new MongoClient(settings.ConnectionString);
-            var database = client.GetDatabase(settings.Database);
-            _salt = database.GetCollection<SaltModel>(settings.Collection);
+            try {
+                var client = new MongoClient(settings.ConnectionString);
+                var database = client.GetDatabase(settings.Database);
+                _salt = database.GetCollection<SaltModel>(settings.Collection);
+            }
+            catch (Exception e)
+            {
+                logger.Error($"Error Code 3.1 - Database connection establishment\n{e.Message}");
+                throw new Exception("Error Code 3.1 - Database connection establishment");
+
+            }
         }
 
         //Get All salt info

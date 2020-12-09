@@ -82,8 +82,6 @@ C:\Users\hakan\source\repos\SKP-INTRA\SKP-IntranetSideAPI\bin\Debug\netcoreapp3.
 C:\Users\hakan\source\repos\SKP-INTRA\SKP-IntranetSideAPI\obj\Debug\netcoreapp3.1\SKP-IntranetSideAPI.csprojAssemblyReference.cache
 C:\Users\hakan\source\repos\SKP-INTRA\SKP-IntranetSideAPI\obj\Debug\netcoreapp3.1\SKP-IntranetSideAPI.AssemblyInfoInputs.cache
 C:\Users\hakan\source\repos\SKP-INTRA\SKP-IntranetSideAPI\obj\Debug\netcoreapp3.1\SKP-IntranetSideAPI.AssemblyInfo.cs
-C:\Users\hakan\source\repos\SKP-INTRA\SKP-IntranetSideAPI\obj\Debug\netcoreapp3.1\SKP-IntranetSideAPI.csproj.CoreCompileInputs.cache
-C:\Users\hakan\source\repos\SKP-INTRA\SKP-IntranetSideAPI\obj\Debug\netcoreapp3.1\SKP-IntranetSideAPI.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\hakan\source\repos\SKP-INTRA\SKP-IntranetSideAPI\obj\Debug\netcoreapp3.1\SKP-IntranetSideAPI.RazorTargetAssemblyInfo.cache
 C:\Users\hakan\source\repos\SKP-INTRA\SKP-IntranetSideAPI\obj\Debug\netcoreapp3.1\SKP-IntranetSideAPI.csproj.CopyComplete
 C:\Users\hakan\source\repos\SKP-INTRA\SKP-IntranetSideAPI\obj\Debug\netcoreapp3.1\staticwebassets\SKP-IntranetSideAPI.StaticWebAssets.Manifest.cache
@@ -91,3 +89,7 @@ C:\Users\hakan\source\repos\SKP-INTRA\SKP-IntranetSideAPI\obj\Debug\netcoreapp3.
 C:\Users\hakan\source\repos\SKP-INTRA\SKP-IntranetSideAPI\obj\Debug\netcoreapp3.1\SKP-IntranetSideAPI.dll
 C:\Users\hakan\source\repos\SKP-INTRA\SKP-IntranetSideAPI\obj\Debug\netcoreapp3.1\SKP-IntranetSideAPI.pdb
 C:\Users\hakan\source\repos\SKP-INTRA\SKP-IntranetSideAPI\obj\Debug\netcoreapp3.1\SKP-IntranetSideAPI.genruntimeconfig.cache
+C:\Users\Hakan\Source\Repos\SKP-INTRA\SKP-IntranetSideAPI\bin\Debug\netcoreapp3.1\NLog.config
+C:\Users\Hakan\Source\Repos\SKP-INTRA\SKP-IntranetSideAPI\bin\Debug\netcoreapp3.1\NLog.dll
+C:\Users\Hakan\Source\Repos\SKP-INTRA\SKP-IntranetSideAPI\obj\Debug\netcoreapp3.1\SKP-IntranetSideAPI.csproj.CoreCompileInputs.cache
+C:\Users\Hakan\Source\Repos\SKP-INTRA\SKP-IntranetSideAPI\obj\Debug\netcoreapp3.1\SKP-IntranetSideAPI.MvcApplicationPartsAssemblyInfo.cache

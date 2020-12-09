@@ -1,18 +1,14 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using NLog;
 using SKP_IntranetSideAPI.Cruds;
 using SKP_IntranetSideAPI.DB_Settings;
+using SKP_IntranetSideAPI.Log;
 
 namespace SKP_IntranetSideAPI
 {
@@ -53,6 +49,7 @@ namespace SKP_IntranetSideAPI
                 x.GetRequiredService<IOptions<ProjectDBSettings>>().Value);
             services.AddSingleton<ProjectCrud>();
 
+            services.AddSingleton<ILog, NLogging>();
             services.AddCors(options =>
             {
                 options.AddPolicy("CorsPolicy",
@@ -68,12 +65,14 @@ namespace SKP_IntranetSideAPI
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILog logger)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.ConfigureExceptionHandler(logger);
 
             app.UseHttpsRedirection();
 

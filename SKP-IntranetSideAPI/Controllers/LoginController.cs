@@ -17,7 +17,7 @@ namespace SKP_IntranetSideAPI.Controllers
     [ApiController]
     public class LoginController : ControllerBase
     {
-        readonly Logger logger = LogManager.GetCurrentClassLogger();
+     //   readonly Logger logger = LogManager.GetCurrentClassLogger();
         private readonly LoginCrud _login;
         private readonly SaltCrud _salt;
         public LoginController(LoginCrud login, SaltCrud salt)
@@ -29,7 +29,7 @@ namespace SKP_IntranetSideAPI.Controllers
         //Get list of all users
         [HttpGet]
         public ActionResult<List<LoginModel>> Get() =>
-             _login.Get();
+                _login.Get();
 
         [HttpPost]
         public ActionResult LoginConfirm([FromBody] JsonElement LoginJson)
@@ -37,7 +37,6 @@ namespace SKP_IntranetSideAPI.Controllers
             try
             {
                 //Crypto?
-
                 var content = JsonConvert.DeserializeObject<LoginModel>(LoginJson.GetRawText());
                 LoginModel SavedContent = _login.GetUserByUserName(content.UserName);
                 if (SavedContent == null)
@@ -53,8 +52,7 @@ namespace SKP_IntranetSideAPI.Controllers
             }
             catch(Exception e)
             {
-                logger.Error($"Error Code 1.2 - Error at HTTPPOST - {e.Message}");
-                return null;
+                throw new Exception($"Error Code 1.2 - Error at HTTPPOST - {e.Message}");
             }
         }
     }

@@ -28,17 +28,31 @@ namespace SKP_IntranetSideAPI.Helper_Classes
         }
         public string Encrypter(string json, string salt)
         {
-            if (salt == null)
-                salt = CryptKey;
-            return Convert.ToBase64String(Task.Run(() => Encrypt(Encoding.UTF8.GetBytes(json), salt)).Result);
+            try
+            {
+                if (salt == null)
+                    salt = CryptKey;
+                return Convert.ToBase64String(Task.Run(() => Encrypt(Encoding.UTF8.GetBytes(json), salt)).Result);
+            }
+            catch
+            {
+                throw new Exception("Error Code 5.3 - Error at Helper clases Encryption Error");
+            }
         }
 
         public byte[] Decrypter(string json, string salt)
         {
-            if (salt == null)
-                salt = CryptKey;
-            var js = JsonConvert.DeserializeObject<APIReqModel>(json);
-            return Task.Run(() => Decrypt(Convert.FromBase64String(js.Json), salt)).Result;
+            try
+            {
+                if (salt == null)
+                    salt = CryptKey;
+                var js = JsonConvert.DeserializeObject<APIReqModel>(json);
+                return Task.Run(() => Decrypt(Convert.FromBase64String(js.Json), salt)).Result;
+            }
+            catch
+            {
+                throw new Exception("Error Code 5.4 - Error at Helper clases Decryption Error");
+            }
         }
         //Encryption Task, used to encrypt data, using existing salt code
         public async Task<byte[]> Encrypt(byte[] bytesToEncrypt, string pass)

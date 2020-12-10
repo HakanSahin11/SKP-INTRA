@@ -27,7 +27,8 @@ namespace SKP_IntranetSideAPI.Controllers
         //Get
         [HttpGet]
         public ActionResult<List<ProjectModel>> Get() =>
-            _project.Get();
+                 _project.Get();
+          
 
         //Create
         [HttpPost]
@@ -44,6 +45,8 @@ namespace SKP_IntranetSideAPI.Controllers
             catch (Exception ex)
             {
                 return BadRequest(ex);
+                throw new Exception("Error Code 2.2 - Project Controller Post request, create user");
+
             }
         }
 
@@ -64,6 +67,7 @@ namespace SKP_IntranetSideAPI.Controllers
             catch (Exception ex)
             {
                 return BadRequest(ex);
+                throw new Exception("Error Code 2.3 - Project Controller Put request, Update user");
             }
         }
 

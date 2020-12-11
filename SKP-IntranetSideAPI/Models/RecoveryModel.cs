@@ -24,12 +24,14 @@ namespace SKP_IntranetSideAPI.Models
 
     public class RecoveryPost
     {
-        public RecoveryPost(string userName, string recoveryPass)
+        public RecoveryPost(string userName, string email, string recoveryPass)
         {
             UserName = userName;
+            Email = email;
             RecoveryPass = recoveryPass;
         }
         public string UserName { get; set; }
+        public string Email { get; set; }
         public string RecoveryPass { get; set; }
     }
 

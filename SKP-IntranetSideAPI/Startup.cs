@@ -49,6 +49,13 @@ namespace SKP_IntranetSideAPI
                 x.GetRequiredService<IOptions<ProjectDBSettings>>().Value);
             services.AddSingleton<ProjectCrud>();
 
+
+            services.Configure<ForumDBSettings>(
+                Configuration.GetSection(nameof(ForumDBSettings)));
+            services.AddSingleton<IForumDBSettings>(x =>
+                x.GetRequiredService<IOptions<ForumDBSettings>>().Value);
+            services.AddSingleton<ForumCrud>();
+
             services.AddSingleton<ILog, NLogging>();
             services.AddCors(options =>
             {

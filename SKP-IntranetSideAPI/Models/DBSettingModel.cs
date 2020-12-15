@@ -56,4 +56,16 @@ namespace SKP_IntranetSideAPI.DB_Settings
         string Database { get; set; }
         string Collection { get; set; }
     }
+    public class ForumDBSettings : IForumDBSettings
+    {
+        public string ConnectionString { get; set; }
+        public string Database { get; set; }
+        public string Collection { get; set; }
+    }
+    public interface IForumDBSettings
+    {
+        string ConnectionString { get; set; }
+        string Database { get; set; }
+        string Collection { get; set; }
+    }
 }

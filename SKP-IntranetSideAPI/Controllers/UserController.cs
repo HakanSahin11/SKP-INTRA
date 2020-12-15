@@ -94,9 +94,9 @@ namespace SKP_IntranetSideAPI.Controllers
                 _users.Update(username, UserIn);
                 return NoContent();
             }
-            catch
+            catch(Exception e)
             {
-                throw new Exception("Error code 3.3 - UserController Put Update user error");
+                throw new Exception($"Error code 3.3 - UserController Put Update user error - {e.Message}");
             }
         }
 

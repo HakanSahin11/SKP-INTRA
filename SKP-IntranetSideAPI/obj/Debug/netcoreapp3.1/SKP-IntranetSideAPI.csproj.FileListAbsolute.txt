@@ -62,7 +62,6 @@ C:\Users\hakan\source\repos\SKP-INSTRA\SKP-IntranetSideAPI\obj\Debug\netcoreapp3
 C:\Users\hakan\source\repos\SKP-INSTRA\SKP-IntranetSideAPI\obj\Debug\netcoreapp3.1\SKP-IntranetSideAPI.genruntimeconfig.cache
 C:\Users\hakan\source\repos\SKP-INTRA\SKP-IntranetSideAPI\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\hakan\source\repos\SKP-INTRA\SKP-IntranetSideAPI\bin\Debug\netcoreapp3.1\appsettings.json
-C:\Users\hakan\source\repos\SKP-INTRA\SKP-IntranetSideAPI\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 C:\Users\hakan\source\repos\SKP-INTRA\SKP-IntranetSideAPI\bin\Debug\netcoreapp3.1\SKP-IntranetSideAPI.exe
 C:\Users\hakan\source\repos\SKP-INTRA\SKP-IntranetSideAPI\bin\Debug\netcoreapp3.1\SKP-IntranetSideAPI.deps.json
 C:\Users\hakan\source\repos\SKP-INTRA\SKP-IntranetSideAPI\bin\Debug\netcoreapp3.1\SKP-IntranetSideAPI.runtimeconfig.json
@@ -91,5 +90,8 @@ C:\Users\hakan\source\repos\SKP-INTRA\SKP-IntranetSideAPI\obj\Debug\netcoreapp3.
 C:\Users\hakan\source\repos\SKP-INTRA\SKP-IntranetSideAPI\obj\Debug\netcoreapp3.1\SKP-IntranetSideAPI.genruntimeconfig.cache
 C:\Users\Hakan\Source\Repos\SKP-INTRA\SKP-IntranetSideAPI\bin\Debug\netcoreapp3.1\NLog.config
 C:\Users\Hakan\Source\Repos\SKP-INTRA\SKP-IntranetSideAPI\bin\Debug\netcoreapp3.1\NLog.dll
+C:\Users\Hakan\Source\Repos\SKP-INTRA\SKP-IntranetSideAPI\bin\Debug\netcoreapp3.1\Microsoft.Azure.Services.AppAuthentication.dll
+C:\Users\Hakan\Source\Repos\SKP-INTRA\SKP-IntranetSideAPI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
 C:\Users\Hakan\Source\Repos\SKP-INTRA\SKP-IntranetSideAPI\obj\Debug\netcoreapp3.1\SKP-IntranetSideAPI.csproj.CoreCompileInputs.cache
 C:\Users\Hakan\Source\Repos\SKP-INTRA\SKP-IntranetSideAPI\obj\Debug\netcoreapp3.1\SKP-IntranetSideAPI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Hakan\Source\Repos\SKP-INTRA\SKP-IntranetSideAPI\obj\Debug\netcoreapp3.1\scopedcss\bundle\SKP-IntranetSideAPI.styles.css

@@ -9,7 +9,6 @@ using MongoDB.Bson;
 using Newtonsoft.Json;
 using SKP_IntranetSideAPI.Cruds;
 using SKP_IntranetSideAPI.Models;
-
 namespace SKP_IntranetSideAPI.Controllers
 {
     [Route("api/[controller]")]
@@ -28,7 +27,6 @@ namespace SKP_IntranetSideAPI.Controllers
         [HttpGet]
         public ActionResult<List<ProjectModel>> Get() =>
                  _project.Get();
-          
 
         //Create
         [HttpPost]
@@ -52,10 +50,12 @@ namespace SKP_IntranetSideAPI.Controllers
 
         //Put
         [HttpPut]
-        public ActionResult Update(string id, ProjectModel UserIn)
+        public ActionResult Update(string id, JsonElement User)
         {
             try
             {
+                var UserIn = JsonConvert.DeserializeObject<ProjectModel>(User.GetRawText());
+
                 if (_project.GetProjectById(ObjectId.Parse(id)) == null)
                     return NotFound();
                 var savedProject = _project.GetProjectById(ObjectId.Parse(id));

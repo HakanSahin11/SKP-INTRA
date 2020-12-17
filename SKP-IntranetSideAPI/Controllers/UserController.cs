@@ -85,10 +85,12 @@ namespace SKP_IntranetSideAPI.Controllers
         }
 
         [HttpPut]
-        public ActionResult Update(string username, UserModel UserIn)
+        public ActionResult Update(string username, JsonElement jsUser)
         {
             try
             {
+                var UserIn = JsonConvert.DeserializeObject<UserModel>(jsUser.GetRawText());
+
                 if (_users.GetUser(username).Result == null)
                     return NotFound();
                 _users.Update(username, UserIn);
